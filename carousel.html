@@ -37,8 +37,9 @@
         padding: 32px;
         padding-left: 86px;
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         gap: 86px;
+        position: relative;
       }
       img {
         height: 200px;
@@ -63,8 +64,37 @@
         color: #c3fae8;
       }
       .btn {
+        background-color: #fff;
+        height: 40px;
+        width: 40px;
+        border: none;
+        position: absolute;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
       }
+      .btn--left {
+        /* In relation to parent element */
+        left: 0;
+        top: 50%;
+        /* In relation to the element */
+        transform: translate(-50%, -50%);
+      }
+
+      .btn--right {
+        /* In relation to parent element */
+        right: 0;
+        top: 50%;
+        /* In relation to the element */
+        transform: translate(50%, -50%);
+      }
+
       .btn-icon {
+        height: 24px;
+        width: 24px;
+        stroke: #087f5b;
       }
     </style>
   </head>
@@ -80,7 +110,7 @@
         <p class="testimonial-author">Bandipo, Kehinde Olushola</p>
         <p class="testimonial-job">Frontend SE KENBANDY Limited</p>
       </blockquote>
-      <button class="btn">
+      <button class="btn btn--left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -97,7 +127,7 @@
         </svg>
       </button>
 
-      <button class="btn">
+      <button class="btn btn--right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
